@@ -1,0 +1,86 @@
+[
+ {
+  "voice": "ko-KR-HyunsuMultilingualNeural",
+  "key": "word",
+  "label": "单词",
+  "text": "사람",
+  "file": "ko-KR-HyunsuMultilingualNeural__word.mp3"
+ },
+ {
+  "voice": "ko-KR-HyunsuMultilingualNeural",
+  "key": "word2",
+  "label": "单词2",
+  "text": "선생님",
+  "file": "ko-KR-HyunsuMultilingualNeural__word2.mp3"
+ },
+ {
+  "voice": "ko-KR-HyunsuMultilingualNeural",
+  "key": "phrase",
+  "label": "短语",
+  "text": "안녕하세요",
+  "file": "ko-KR-HyunsuMultilingualNeural__phrase.mp3"
+ },
+ {
+  "voice": "ko-KR-HyunsuMultilingualNeural",
+  "key": "sentence",
+  "label": "句子",
+  "text": "선생님! 질문 있어요.",
+  "file": "ko-KR-HyunsuMultilingualNeural__sentence.mp3"
+ },
+ {
+  "voice": "ko-KR-InJoonNeural",
+  "key": "word",
+  "label": "单词",
+  "text": "사람",
+  "file": "ko-KR-InJoonNeural__word.mp3"
+ },
+ {
+  "voice": "ko-KR-InJoonNeural",
+  "key": "word2",
+  "label": "单词2",
+  "text": "선생님",
+  "file": "ko-KR-InJoonNeural__word2.mp3"
+ },
+ {
+  "voice": "ko-KR-InJoonNeural",
+  "key": "phrase",
+  "label": "短语",
+  "text": "안녕하세요",
+  "file": "ko-KR-InJoonNeural__phrase.mp3"
+ },
+ {
+  "voice": "ko-KR-InJoonNeural",
+  "key": "sentence",
+  "label": "句子",
+  "text": "선생님! 질문 있어요.",
+  "file": "ko-KR-InJoonNeural__sentence.mp3"
+ },
+ {
+  "voice": "ko-KR-SunHiNeural",
+  "key": "word",
+  "label": "单词",
+  "text": "사람",
+  "file": "ko-KR-SunHiNeural__word.mp3"
+ },
+ {
+  "voice": "ko-KR-SunHiNeural",
+  "key": "word2",
+  "label": "单词2",
+  "text": "선생님",
+  "file": "ko-KR-SunHiNeural__word2.mp3"
+ },
+ {
+  "voice": "ko-KR-SunHiNeural",
+  "key": "phrase",
+  "label": "短语",
+  "text": "안녕하세요",
+  "file": "ko-KR-SunHiNeural__phrase.mp3"
+ },
+ {
+  "voice": "ko-KR-SunHiNeural",
+  "key": "sentence",
+  "label": "句子",
+  "text": "선생님! 질문 있어요.",
+  "file": "ko-KR-SunHiNeural__sentence.mp3"
+ }
+]

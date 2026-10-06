@@ -52,7 +52,9 @@
       <div id="padTools">
         <span class="padLabel">手写（写完不保存）</span>
         <label class="chk"><input type="checkbox" id="penOnly" checked> 只认笔（防手掌误触）</label>
+        <button id="zenBtn" class="ghost small">放大写字</button>
         <button id="clearPad" class="ghost small">清空</button>
+        <button id="zenExit" class="ghost small zen-exit" hidden>退出放大</button>
       </div>
       <canvas id="pad"></canvas>
       <div id="penInfo" class="tiny"></div>
@@ -83,21 +85,24 @@
     </section>
 
     <section class="chk-box">
-      <h3>③ 韩语朗读</h3>
+      <h3>③ 韩语朗读 —— 请帮我选一个</h3>
       <div id="t-voices">检测中…</div>
-      <div class="row">
-        <button id="t-speak1" class="ghost small">试读：안녕하세요</button>
-        <button id="t-speak2" class="ghost small">试读：선생님! 질문 있어요.</button>
-      </div>
-      <p class="tiny">如果没有韩语声音：iPad 设置 → 辅助功能 → 朗读内容 → 声音 → 韩语 → 下载一个（免费）。</p>
+      <p class="tiny">下面是<b>微软的神经网络语音</b>（我预先做好的音频）和 <b>iPad 系统语音</b>的对比。
+        同一句话，你听哪个最像真人说话，就告诉我哪一个。</p>
+      <div id="voiceCompare"></div>
+      <p class="tiny">如果全部都不满意，也直接说 —— 我再去换别的方案。</p>
     </section>
 
     <section class="chk-box">
       <h3>④ 手写会不会画乱线</h3>
-      <p class="tiny">在下面用笔写字，同时<b>把手掌压在屏幕上</b>，看会不会出现多余的线。</p>
+      <p class="tiny">在下面用笔写字，同时<b>把手掌压在屏幕上</b>，看会不会出现多余的线。<br>
+        这一版修了两个问题：笔尖移出框不再断笔、每笔跟着压感变粗细。</p>
       <div id="t-penInfo" class="tiny"></div>
       <canvas id="padTest"></canvas>
-      <button id="t-clearPad" class="ghost small">清空</button>
+      <div class="row">
+        <button id="t-clearPad" class="ghost small">清空</button>
+        <button id="t-zen" class="ghost small">放大写字区</button>
+      </div>
     </section>
 
     <section class="chk-box">
