@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<!-- iPad 专用：禁止缩放、适配刘海/圆角、支持"添加到主屏幕"后全屏运行 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="韩语单词">
+<meta name="theme-color" content="#f7f7f5">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>韩语背单词</title>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ============ 顶部栏 ============ -->
+  <header id="bar">
+    <div id="barTitle">韩语背单词</div>
+    <div id="barTabs">
+      <button class="tab" data-view="study">背单词</button>
+      <button class="tab" data-view="test">自检</button>
+    </div>
+  </header>
+
+  <!-- ============ 背单词 ============ -->
+  <main id="view-study" class="view">
+    <div id="counter">加载中…</div>
+
+    <div id="card">
+      <div id="front">
+        <div id="korean">·</div>
+        <div id="pron"></div>
+        <button id="speakBtn" class="ghost">🔊 读一遍</button>
+      </div>
+      <div id="back" hidden>
+        <div id="zh"></div>
+        <div id="zhDfn"></div>
+        <div id="exWrap" hidden>
+          <div class="label">例句</div>
+          <div id="ex"></div>
+          <div class="tiny">例句译文由机器翻译，仅供参考；韩语原句来自韩国国立国语院《韩国语基础词典》</div>
+        </div>
+        <div id="metaLine" class="tiny"></div>
+      </div>
+    </div>
+
+    <!-- 手写区 -->
+    <div id="padWrap">
+      <div id="padTools">
+        <span class="padLabel">手写（写完不保存）</span>
+        <label class="chk"><input type="checkbox" id="penOnly" checked> 只认笔（防手掌误触）</label>
+        <button id="clearPad" class="ghost small">清空</button>
+      </div>
+      <canvas id="pad"></canvas>
+      <div id="penInfo" class="tiny"></div>
+    </div>
+
+    <div id="actions">
+      <button id="flipBtn" class="big">翻面看意思</button>
+      <button id="againBtn" class="big bad" hidden>不记得</button>
+      <button id="goodBtn" class="big good" hidden>记得</button>
+    </div>
+    <div id="progressLine" class="tiny"></div>
+  </main>
+
+  <!-- ============ 自检 ============ -->
+  <main id="view-test" class="view" hidden>
+    <p class="lead">这一页是用来<b>在你 iPad 上验证三件事</b>的。请照着从上到下点一遍，把结果告诉我。</p>
+
+    <section class="chk-box">
+      <h3>① 是不是"添加到主屏幕"打开的？</h3>
+      <div id="t-standalone">检测中…</div>
+      <p class="tiny">在 Safari 里打开时这里会显示"否"。点分享按钮 →「添加到主屏幕」→ 从主屏图标打开，就会变成"是"。</p>
+    </section>
+
+    <section class="chk-box">
+      <h3>② 进度能不能存住（localStorage）</h3>
+      <div id="t-storage">检测中…</div>
+      <button id="t-storageBtn" class="ghost small">写一条测试数据</button>
+    </section>
+
+    <section class="chk-box">
+      <h3>③ 韩语朗读</h3>
+      <div id="t-voices">检测中…</div>
+      <div class="row">
+        <button id="t-speak1" class="ghost small">试读：안녕하세요</button>
+        <button id="t-speak2" class="ghost small">试读：선생님! 질문 있어요.</button>
+      </div>
+      <p class="tiny">如果没有韩语声音：iPad 设置 → 辅助功能 → 朗读内容 → 声音 → 韩语 → 下载一个（免费）。</p>
+    </section>
+
+    <section class="chk-box">
+      <h3>④ 手写会不会画乱线</h3>
+      <p class="tiny">在下面用笔写字，同时<b>把手掌压在屏幕上</b>，看会不会出现多余的线。</p>
+      <div id="t-penInfo" class="tiny"></div>
+      <canvas id="padTest"></canvas>
+      <button id="t-clearPad" class="ghost small">清空</button>
+    </section>
+
+    <section class="chk-box">
+      <h3>⑤ 数据和出处</h3>
+      <div id="t-meta">加载中…</div>
+    </section>
+  </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

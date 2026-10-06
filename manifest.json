@@ -1,0 +1,9 @@
+{
+  "name": "韩语背单词",
+  "short_name": "韩语单词",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f7f5",
+  "theme_color": "#f7f7f5",
+  "orientation": "any"
+}

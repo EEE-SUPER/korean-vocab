@@ -1,0 +1,112 @@
+/* 韩语背单词 —— 样式。为 iPad 竖屏/横屏都做得舒服一点。 */
+
+:root{
+  --bg:#f7f7f5;
+  --card:#ffffff;
+  --ink:#1c1c1e;
+  --dim:#8a8a8e;
+  --line:#e4e4e2;
+  --good:#2f9e63;
+  --bad:#d4623f;
+  --accent:#3a6ea5;
+  --radius:16px;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+
+/* hidden 属性必须压过下面的 display:flex，否则藏不住 */
+[hidden]{display:none !important;}
+
+html,body{
+  margin:0;padding:0;height:100%;
+  background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  /* 防止整页被拖动/回弹，写起来更稳 */
+  overscroll-behavior:none;
+}
+
+#app{display:flex;flex-direction:column;min-height:100%;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);}
+
+/* ---------- 顶栏 ---------- */
+#bar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 16px;border-bottom:1px solid var(--line);background:rgba(247,247,245,.92);
+  backdrop-filter:saturate(180%) blur(12px);position:sticky;top:0;z-index:10;
+}
+#barTitle{font-weight:600;font-size:16px;}
+#barTabs{display:flex;gap:6px;}
+.tab{
+  border:1px solid var(--line);background:#fff;border-radius:999px;
+  padding:7px 16px;font-size:14px;color:var(--dim);
+}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* ---------- 通用 ---------- */
+.view{padding:16px;flex:1;display:flex;flex-direction:column;gap:14px;max-width:860px;width:100%;margin:0 auto;}
+.tiny{font-size:12px;color:var(--dim);line-height:1.6;}
+.label{font-size:12px;color:var(--dim);margin-bottom:2px;}
+.lead{font-size:15px;line-height:1.7;margin:0;}
+.row{display:flex;gap:8px;flex-wrap:wrap;}
+b{font-weight:600;}
+
+button{font-family:inherit;cursor:pointer;}
+.ghost{
+  border:1px solid var(--line);background:#fff;border-radius:10px;
+  padding:8px 14px;font-size:14px;color:var(--ink);
+}
+.ghost.small{padding:6px 12px;font-size:13px;}
+
+/* ---------- 卡片 ---------- */
+#counter{font-size:13px;color:var(--dim);text-align:center;}
+#card{
+  background:var(--card);border-radius:var(--radius);border:1px solid var(--line);
+  padding:28px 22px;min-height:230px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);
+}
+#front,#back{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px;}
+#korean{font-size:52px;font-weight:600;letter-spacing:.02em;line-height:1.25;}
+#pron{font-size:15px;color:var(--accent);}
+#zh{font-size:28px;font-weight:600;}
+#zhDfn{font-size:15px;color:#444;line-height:1.75;max-width:44em;}
+#exWrap{width:100%;border-top:1px dashed var(--line);padding-top:12px;margin-top:4px;}
+#ex{font-size:16px;line-height:1.9;}
+#ex div{padding:2px 0;}
+#metaLine{margin-top:6px;}
+
+/* ---------- 手写区 ---------- */
+#padWrap{display:flex;flex-direction:column;gap:8px;}
+#padTools{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.padLabel{font-size:13px;color:var(--dim);}
+.chk{font-size:13px;color:var(--dim);display:flex;align-items:center;gap:6px;}
+.chk input{width:18px;height:18px;}
+
+#pad,#padTest{
+  width:100%;height:210px;background:#fff;
+  border:1px solid var(--line);border-radius:12px;
+  /* 关键：让浏览器别把画的动作当成滚动/缩放 */
+  touch-action:none;
+  display:block;
+}
+#padTest{height:240px;}
+
+/* ---------- 按钮组 ---------- */
+#actions{display:flex;gap:10px;}
+.big{
+  flex:1;border:none;border-radius:14px;padding:16px;font-size:17px;font-weight:600;
+  background:var(--ink);color:#fff;
+}
+.big.good{background:var(--good);}
+.big.bad{background:var(--bad);}
+#progressLine{text-align:center;}
+
+/* ---------- 自检页 ---------- */
+.chk-box{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;display:flex;flex-direction:column;gap:10px;
+}
+.chk-box h3{margin:0;font-size:15px;}
+.ok{color:var(--good);font-weight:600;}
+.no{color:var(--bad);font-weight:600;}
+.warn{color:#b8860b;font-weight:600;}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;}
