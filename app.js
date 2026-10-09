@@ -398,7 +398,7 @@ function renderVoiceCompare() {
       const b = document.createElement('button');
       b.className = 'ghost small';
       b.textContent = it.key === 'word' ? '读单词' : '读句子';
-      b.addEventListener('click', () => playFile(`audio/_test/${v.id}__${it.key}.mp3`));
+      b.addEventListener('click', () => playFile(`audio/voicetest/${v.id}__${it.key}.mp3`));
       row.appendChild(b);
     }
     box.appendChild(row);
